@@ -13,6 +13,8 @@ public class TestFrameModule extends AbstractModule {
 		bind(Sluchacz.class).in(Scopes.SINGLETON);
 		bind(JButton.class).annotatedWith(Names.named("nazwa")).toInstance(
 				new JButton("Przycisk annotowany"));
+		
+		
 		bind(AbstractAction.class).annotatedWith(Names.named("quitaction"))
 				.toInstance(new AbstractAction("name of button") {
 					public void actionPerformed(ActionEvent e) {

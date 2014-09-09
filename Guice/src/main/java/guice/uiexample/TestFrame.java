@@ -14,7 +14,7 @@ public class TestFrame extends JFrame {
 
 	@Inject
 	public TestFrame(Panelik panel, @Named("nazwa") JButton button, Sluchacz s,
-			@Named("quitaction") AbstractAction asquit, JButton quit) {
+			@Named("quitaction") AbstractAction asquit, JButton quit, JButton marta) {
 		super();
 		add(panel, BorderLayout.CENTER);
 
@@ -25,6 +25,11 @@ public class TestFrame extends JFrame {
 		quit.addActionListener(asquit);
 		quit.setText("Quit");
 		p.add(quit);
+		//START
+		marta.addActionListener(s);
+		marta.setText("Marta");
+		p.add(marta);
+		//STOP
 		add(p, BorderLayout.NORTH);
 		pack();
 		setVisible(true);
