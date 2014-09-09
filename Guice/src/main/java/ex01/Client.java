@@ -16,7 +16,7 @@ public class Client {
 		Injector injector = Guice.createInjector(new PersonModule());
 		IPersonService service = injector.getInstance(IPersonService.class);
 
-		Person p1 = new Person("Jan", "Kowalski", 15);
+		Person p1 = new Person("Jan", "Ana", 15);
 		Person p2 = new Person("Anna", "Nowakowska", 18);
 		Person p3 = new Person("Adam", "Rybak", 33);
 		service.savePersons(p1, p2, p3);
